@@ -1,0 +1,73 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Table2</title>
+</head>
+<style>
+    table{
+        background-color: rgb(209, 202, 194);
+        border: rgb(250, 165, 53);
+        border: 1px solid rgb(247, 145, 12);
+    }
+    table {
+                  width: 20%;
+                  margin: 5px;
+                }
+</style>
+<body>
+    <table id="table" border="1">
+        <tr>
+            <td>Raghav</td>
+            <td>CEO</td>
+        </tr>
+        <tr>
+            <td>Vishnue</td>
+            <td>Manager</td>
+        </tr>
+
+        <tr>
+            <td>Saurav</td>
+            <td>Team Leader</td>
+        </tr>
+        <tr>
+            <td>Keshav</td>
+            <td>Quality Analyst</td>
+        </tr>
+        <tr>
+            <td>Tabish</td>
+            <td>Senior Developer</td>
+        </tr>
+        <tr>
+            <td>Ravish</td>
+            <td>Project Lead</td>
+        </tr>
+        <tr>
+            <td>Ganesh</td>
+            <td>UI/UX Develpoer</td>
+        </tr>
+        <tr>
+            <td>Thavikaran</td>
+            <td>Architect</td>
+        </tr>
+    </table>
+
+    <script >
+
+        var table = document.getElementById('table');
+
+        for (var i = 0; i < table.rows.length; i++) {
+            table.rows[i].onclick = function () {
+                document.getElementById("Name").value = this.cells[0].innerHTML;
+                document.getElementById("Role").value = this.cells[1].innerHTML;
+            }
+        };
+    </script>
+
+    <input type="text" name="Name" id="Name">  <input type="text" name="Role" id="Role">
+    
+
+</body>
+
+</html>
